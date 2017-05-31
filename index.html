@@ -376,8 +376,24 @@
           
             <p><strong>正文</strong></p>
 <p><strong>需要知道项目根路径，在网上查到了方法：</strong></p>
-<p>function getRootPath(){<br>//获取当前网址，如： <a href="http://localhost:8083/uimcardprj/share/meun.jsp" target="_blank" rel="external">http://localhost:8083/uimcardprj/share/meun.jsp</a><br>var curWwwPath=window.document.location.href;<br>//获取主机地址之后的目录，如： /uimcardprj/share/meun.jsp<br>var pathName=window.document.location.pathname;<br>var pos=curWwwPath.indexOf(pathName);<br>//获取主机地址，如： <a href="http://localhost:8083" target="_blank" rel="external">http://localhost:8083</a><br>var localhostPath=curWwwPath.substring(0,pos);<br>if(pathName == “/“){<br>  var path = curWwwPath.substring(0,curWwwPath.length-1);<br>  return path;<br>}else{<br>  //获取带”/“的项目名，如：/uimcardprj<br>  var projectName=pathName.substring(0,pathName.substr(1).indexOf(‘/‘)+1);<br>  return(localhostPath+projectName);<br>}<br>} </p>
-
+<pre><code>function getrootpath(){
+//获取当前网址，如： http://localhost:8083/uimcardprj/share/meun.jsp  
+var curwwwpath=window.document.location.href;  
+//获取主机地址之后的目录，如： /uimcardprj/share/meun.jsp  
+var pathname=window.document.location.pathname;  
+var pos=curwwwpath.indexof(pathname);  
+//获取主机地址，如： http://localhost:8083  
+var localhostpath=curwwwpath.substring(0,pos);  
+if(pathname == &quot;/&quot;){  
+  var path = curwwwpath.substring(0,curwwwpath.length-1);  
+  return path;  
+}else{  
+  //获取带&quot;/&quot;的项目名，如：/uimcardprj  
+  var projectname=pathname.substring(0,pathname.substr(1).indexof(&apos;/&apos;)+1);  
+  return(localhostpath+projectname);  
+}  
+} 
+</code></pre>
           
         
       
