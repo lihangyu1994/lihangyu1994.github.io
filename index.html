@@ -273,6 +273,152 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/31/js查询项目根路径/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李航宇">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/user.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小学生的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/31/js查询项目根路径/" itemprop="url">js查询项目根路径</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-31T11:23:23+08:00">
+                2017-05-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编码技术/" itemprop="url" rel="index">
+                    <span itemprop="name">编码技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/31/js查询项目根路径/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/31/js查询项目根路径/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>正文</strong></p>
+<h1 id="项目里，需要知道项目根路径，在网上查到了方法："><a href="#项目里，需要知道项目根路径，在网上查到了方法：" class="headerlink" title="#  项目里，需要知道项目根路径，在网上查到了方法： #"></a>#  项目里，需要知道项目根路径，在网上查到了方法： #</h1><p>function getRootPath(){<br>//获取当前网址，如： <a href="http://localhost:8083/uimcardprj/share/meun.jsp" target="_blank" rel="external">http://localhost:8083/uimcardprj/share/meun.jsp</a><br>var curWwwPath=window.document.location.href;<br>//获取主机地址之后的目录，如： /uimcardprj/share/meun.jsp<br>var pathName=window.document.location.pathname;<br>var pos=curWwwPath.indexOf(pathName);<br>//获取主机地址，如： <a href="http://localhost:8083" target="_blank" rel="external">http://localhost:8083</a><br>var localhostPath=curWwwPath.substring(0,pos);<br>if(pathName == “/“){<br>  var path = curWwwPath.substring(0,curWwwPath.length-1);<br>  return path;<br>}else{<br>  //获取带”/“的项目名，如：/uimcardprj<br>  var projectName=pathName.substring(0,pathName.substr(1).indexOf(‘/‘)+1);<br>  return(localhostPath+projectName);<br>}<br>} </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/今天真是个好日子/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -740,7 +886,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -751,7 +897,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
