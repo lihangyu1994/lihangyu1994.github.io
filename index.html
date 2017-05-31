@@ -375,7 +375,8 @@
         
           
             <p><strong>正文</strong></p>
-<h1 id="项目里，需要知道项目根路径，在网上查到了方法："><a href="#项目里，需要知道项目根路径，在网上查到了方法：" class="headerlink" title="#  项目里，需要知道项目根路径，在网上查到了方法： #"></a>#  项目里，需要知道项目根路径，在网上查到了方法： #</h1><p>function getRootPath(){<br>//获取当前网址，如： <a href="http://localhost:8083/uimcardprj/share/meun.jsp" target="_blank" rel="external">http://localhost:8083/uimcardprj/share/meun.jsp</a><br>var curWwwPath=window.document.location.href;<br>//获取主机地址之后的目录，如： /uimcardprj/share/meun.jsp<br>var pathName=window.document.location.pathname;<br>var pos=curWwwPath.indexOf(pathName);<br>//获取主机地址，如： <a href="http://localhost:8083" target="_blank" rel="external">http://localhost:8083</a><br>var localhostPath=curWwwPath.substring(0,pos);<br>if(pathName == “/“){<br>  var path = curWwwPath.substring(0,curWwwPath.length-1);<br>  return path;<br>}else{<br>  //获取带”/“的项目名，如：/uimcardprj<br>  var projectName=pathName.substring(0,pathName.substr(1).indexOf(‘/‘)+1);<br>  return(localhostPath+projectName);<br>}<br>} </p>
+<p><strong>需要知道项目根路径，在网上查到了方法：</strong></p>
+<p>function getRootPath(){<br>//获取当前网址，如： <a href="http://localhost:8083/uimcardprj/share/meun.jsp" target="_blank" rel="external">http://localhost:8083/uimcardprj/share/meun.jsp</a><br>var curWwwPath=window.document.location.href;<br>//获取主机地址之后的目录，如： /uimcardprj/share/meun.jsp<br>var pathName=window.document.location.pathname;<br>var pos=curWwwPath.indexOf(pathName);<br>//获取主机地址，如： <a href="http://localhost:8083" target="_blank" rel="external">http://localhost:8083</a><br>var localhostPath=curWwwPath.substring(0,pos);<br>if(pathName == “/“){<br>  var path = curWwwPath.substring(0,curWwwPath.length-1);<br>  return path;<br>}else{<br>  //获取带”/“的项目名，如：/uimcardprj<br>  var projectName=pathName.substring(0,pathName.substr(1).indexOf(‘/‘)+1);<br>  return(localhostPath+projectName);<br>}<br>} </p>
 
           
         
@@ -908,7 +909,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

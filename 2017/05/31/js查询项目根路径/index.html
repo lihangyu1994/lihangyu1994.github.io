@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="博客," />
+  <meta name="keywords" content="编码技术," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="正文 #  项目里，需要知道项目根路径，在网上查到了方法： #function getRootPath(){//获取当前网址，如： http://localhost:8083/uimcardprj/share/meun.jspvar curWwwPath=window.document.location.href;//获取主机地址之后的目录，如： /uimcardprj/share/meun.js">
-<meta name="keywords" content="博客">
+<meta name="description" content="正文 需要知道项目根路径，在网上查到了方法： function getRootPath(){//获取当前网址，如： http://localhost:8083/uimcardprj/share/meun.jspvar curWwwPath=window.document.location.href;//获取主机地址之后的目录，如： /uimcardprj/share/meun.jspvar pat">
+<meta name="keywords" content="编码技术">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js查询项目根路径">
 <meta property="og:url" content="http://yoursite.com/2017/05/31/js查询项目根路径/index.html">
 <meta property="og:site_name" content="小学生的博客">
-<meta property="og:description" content="正文 #  项目里，需要知道项目根路径，在网上查到了方法： #function getRootPath(){//获取当前网址，如： http://localhost:8083/uimcardprj/share/meun.jspvar curWwwPath=window.document.location.href;//获取主机地址之后的目录，如： /uimcardprj/share/meun.js">
-<meta property="og:updated_time" content="2017-05-31T03:26:37.061Z">
+<meta property="og:description" content="正文 需要知道项目根路径，在网上查到了方法： function getRootPath(){//获取当前网址，如： http://localhost:8083/uimcardprj/share/meun.jspvar curWwwPath=window.document.location.href;//获取主机地址之后的目录，如： /uimcardprj/share/meun.jspvar pat">
+<meta property="og:updated_time" content="2017-05-31T03:42:55.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js查询项目根路径">
-<meta name="twitter:description" content="正文 #  项目里，需要知道项目根路径，在网上查到了方法： #function getRootPath(){//获取当前网址，如： http://localhost:8083/uimcardprj/share/meun.jspvar curWwwPath=window.document.location.href;//获取主机地址之后的目录，如： /uimcardprj/share/meun.js">
+<meta name="twitter:description" content="正文 需要知道项目根路径，在网上查到了方法： function getRootPath(){//获取当前网址，如： http://localhost:8083/uimcardprj/share/meun.jspvar curWwwPath=window.document.location.href;//获取主机地址之后的目录，如： /uimcardprj/share/meun.jspvar pat">
 
 
 
@@ -371,7 +371,8 @@
 
       
         <p><strong>正文</strong></p>
-<h1 id="项目里，需要知道项目根路径，在网上查到了方法："><a href="#项目里，需要知道项目根路径，在网上查到了方法：" class="headerlink" title="#  项目里，需要知道项目根路径，在网上查到了方法： #"></a>#  项目里，需要知道项目根路径，在网上查到了方法： #</h1><p>function getRootPath(){<br>//获取当前网址，如： <a href="http://localhost:8083/uimcardprj/share/meun.jsp" target="_blank" rel="external">http://localhost:8083/uimcardprj/share/meun.jsp</a><br>var curWwwPath=window.document.location.href;<br>//获取主机地址之后的目录，如： /uimcardprj/share/meun.jsp<br>var pathName=window.document.location.pathname;<br>var pos=curWwwPath.indexOf(pathName);<br>//获取主机地址，如： <a href="http://localhost:8083" target="_blank" rel="external">http://localhost:8083</a><br>var localhostPath=curWwwPath.substring(0,pos);<br>if(pathName == “/“){<br>  var path = curWwwPath.substring(0,curWwwPath.length-1);<br>  return path;<br>}else{<br>  //获取带”/“的项目名，如：/uimcardprj<br>  var projectName=pathName.substring(0,pathName.substr(1).indexOf(‘/‘)+1);<br>  return(localhostPath+projectName);<br>}<br>} </p>
+<p><strong>需要知道项目根路径，在网上查到了方法：</strong></p>
+<p>function getRootPath(){<br>//获取当前网址，如： <a href="http://localhost:8083/uimcardprj/share/meun.jsp" target="_blank" rel="external">http://localhost:8083/uimcardprj/share/meun.jsp</a><br>var curWwwPath=window.document.location.href;<br>//获取主机地址之后的目录，如： /uimcardprj/share/meun.jsp<br>var pathName=window.document.location.pathname;<br>var pos=curWwwPath.indexOf(pathName);<br>//获取主机地址，如： <a href="http://localhost:8083" target="_blank" rel="external">http://localhost:8083</a><br>var localhostPath=curWwwPath.substring(0,pos);<br>if(pathName == “/“){<br>  var path = curWwwPath.substring(0,curWwwPath.length-1);<br>  return path;<br>}else{<br>  //获取带”/“的项目名，如：/uimcardprj<br>  var projectName=pathName.substring(0,pathName.substr(1).indexOf(‘/‘)+1);<br>  return(localhostPath+projectName);<br>}<br>} </p>
 
       
     </div>
@@ -401,7 +402,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/博客/" rel="tag"># 博客</a>
+            <a href="/tags/编码技术/" rel="tag"># 编码技术</a>
           
         </div>
       
@@ -476,17 +477,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/user.jpg"
@@ -523,7 +515,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -568,22 +560,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#项目里，需要知道项目根路径，在网上查到了方法："><span class="nav-number">1.</span> <span class="nav-text">#  项目里，需要知道项目根路径，在网上查到了方法： #</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
