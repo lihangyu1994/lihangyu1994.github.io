@@ -352,115 +352,16 @@
       
         
           
-            <p>import java.util.ArrayList;<br>import java.util.List;<br>import java.util.Map;  </p>
-<p>import com.google.gson.Gson;<br>import com.google.gson.JsonArray;<br>import com.google.gson.JsonElement;<br>import com.google.gson.JsonParser;<br>import com.google.gson.reflect.TypeToken;  </p>
-<p>public class GsonUtil {    </p>
-<p>private static Gson gson = null;<br>    static {<br>        if (gson == null) {<br>            gson = new Gson();<br>        }<br>    }    </p>
-<pre><code>private GsonUtil() {    
-}    
-
-
-/**   
- * 将object对象转成json字符串   
- *    
- * @param object   
- * @return   
- */    
-public static String GsonString(Object object) {    
-    String gsonString = null;    
-    if (gson != null) {    
-        gsonString = gson.toJson(object);    
-    }    
-    return gsonString;    
-}    
-
-
-/**   
- * 将gsonString转成泛型bean   
- *    
- * @param gsonString   
- * @param cls   
- * @return   
- */    
-public static &lt;T&gt; T GsonToBean(String gsonString, Class&lt;T&gt; cls) {    
-    T t = null;    
-    if (gson != null) {    
-        t = gson.fromJson(gsonString, cls);    
-    }    
-    return t;    
-}    
-</code></pre><p>   /**   </p>
-<pre><code> * 转成list   
- * 泛型在编译期类型被擦除导致报错   
- * @param gsonString   
- * @param cls   
- * @return   
- */    
-public static &lt;T&gt; List&lt;T&gt; GsonToList(String gsonString, Class&lt;T&gt; cls) {    
-    List&lt;T&gt; list = null;    
-    if (gson != null) {    
-        list = gson.fromJson(gsonString, new TypeToken&lt;List&lt;T&gt;&gt;() {    
-        }.getType());    
-    }    
-    return list;    
-}    
-
-
-/**   
- * 转成list   
- * 解决泛型问题   
- * @param json   
- * @param cls   
- * @param &lt;T&gt;   
- * @return   
- */    
-public static &lt;T&gt; List&lt;T&gt; jsonToList(String json, Class&lt;T&gt; cls) {    
-    Gson gson = new Gson();    
-    List&lt;T&gt; list = new ArrayList&lt;T&gt;();    
-    JsonArray array = new JsonParser().parse(json).getAsJsonArray();    
-    for(final JsonElement elem : array){    
-        list.add(gson.fromJson(elem, cls));    
-    }    
-    return list;    
-}    
-
-
-
-
-/**   
- * 转成list中有map的   
- *    
- * @param gsonString   
- * @return   
- */    
-public static &lt;T&gt; List&lt;Map&lt;String, T&gt;&gt; GsonToListMaps(String gsonString) {    
-    List&lt;Map&lt;String, T&gt;&gt; list = null;    
-    if (gson != null) {    
-        list = gson.fromJson(gsonString,    
-                new TypeToken&lt;List&lt;Map&lt;String, T&gt;&gt;&gt;() {    
-                }.getType());    
-    }    
-    return list;    
-}    
-
-
-/**   
- * 转成map的   
- *    
- * @param gsonString   
- * @return   
- */    
-public static &lt;T&gt; Map&lt;String, T&gt; GsonToMaps(String gsonString) {    
-    Map&lt;String, T&gt; map = null;    
-    if (gson != null) {    
-        map = gson.fromJson(gsonString, new TypeToken&lt;Map&lt;String, T&gt;&gt;() {    
-        }.getType());    
-    }    
-    return map;    
-}    
-</code></pre><p>}  </p>
-
-          
+          import java.util.ArrayList;import java.util.List;import java.util.Map;  
+import com.google.gson.Gson;import com.google.gson.JsonArray;import com.googl
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/19/Gson-工具类/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -603,27 +504,19 @@ public static &lt;T&gt; Map&lt;String, T&gt; GsonToMaps(String gsonString) {
       
         
           
-            <p><strong>正文</strong></p>
-<p><strong>需要知道项目根路径，在网上查到了方法：</strong></p>
-<pre><code>function getrootpath(){
+          正文
+需要知道项目根路径，在网上查到了方法：
+function getrootpath(){
 //获取当前网址，如： http://localhost:8083/uimcardprj/share/meun.jsp  
-var curwwwpath=window.document.location.href;  
-//获取主机地址之后的目录，如： /uimcardprj/share/meun.jsp  
-var pathname=window.document.location.pathname;  
-var pos=curwwwpath.indexof(pathname);  
-//获取主机地址，如： http://localhost:8083  
-var localhostpath=curwwwpath.substring(0,pos);  
-if(pathname == &quot;/&quot;){  
-  var path = curwwwpath.substring(0,curwwwpath.length-1);  
-  return path;  
-}else{  
-  //获取带&quot;/&quot;的项目名，如：/uimcardprj  
-  var projectname=pathname.substring(0,pathname.substr(1).indexof(&apos;/&apos;)+1);  
-  return(localhostpath+projectname);  
-}  
-} 
-</code></pre>
-          
+var curwwwpath=window.document.location.h
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/31/js查询项目根路径/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -753,10 +646,17 @@ if(pathname == &quot;/&quot;){
       
         
           
-            <p><strong>正文</strong><br><img src="https://i.imgur.com/wNoJ2fo.jpg" alt=""></p>
-<p>   今天把博客搭起来啦，啦啦啦德玛西亚</p>
+          正文
+   今天把博客搭起来啦，啦啦啦德玛西亚
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/09/今天真是个好日子/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
